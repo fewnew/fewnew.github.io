@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* {
+  margin:0; padding:0;
+  box-sizing: inherit;
+}
+
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #000;
+  margin:0; top:0; left:0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 85vw;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.one,
+.one-third,
+.two-thirds,
+.one-fourth,
+.half {
+  width: 100%;
+}
+
+#sketch {
+  width:100vw;
+  height: 100vh;
+  margin:0; padding:0;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: -3;
+  overflow: visible;
+  border:none;
+}
+
+h1 {
+  margin:40px auto;
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Roboto Slab', serif;
+  vertical-align: middle;
+}
+
+span {
+  background-color: #000;
+  color: #fff;
+}
+
+.text {
+  background-color: #ccc;
+  margin: 0 auto;
+  padding:25px;
+  font-family: 'Montserrat', sans-serif;
+  border: 3px solid #000;
+
+}
+
+#links {
+  margin-top: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#links p {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+#links p a {
+  text-decoration: none;
+  color:#fff;
+}
+
+/* About Page */
+#cover-image {
+  opacity: 0.7;
+  position: absolute;
+  z-index: -999;
+}
+
+
+@media screen and (min-width: 768px) {
+  .one {
+    width: 100%;
+  }
+  .half {
+    width: calc(100% / 2);
+  }
+  .one-third {
+    width: calc(100% / 3);
+  }
+  .one-fourth {
+    width: calc(100% / 4);
+  }
+  .two-thirds {
+    width: calc(100% / 3 * 2);
+  }
+  .column {
+    float: left;
+  } 
+/* Tablet+ styles */
+h1 { margin:60px auto; }
+
+.text { width:50%; }
+
+#links { margin-top: 60px; }
+
+#links p { margin-bottom: 0; }
