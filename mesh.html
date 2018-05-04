@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<style>
 			body {
-				background-color: #000;
+				background-color: #ccc;
 				margin: 0; padding: 0;
 				top:0; left:0;
 				overflow: hidden;
@@ -37,39 +37,14 @@
 				
 				// paste your code from the geometryGUI here
 				geometry = new THREE.TorusKnotGeometry(200, 149.83, 9, 3, 3.73, 2.21, 6.92);
-				material = new THREE.MeshNormalMaterial({shading: THREE.SmoothShading, side: THREE.DoubleSide, transparent: true, opacity: 0.34});
+				material = new THREE.MeshBasicMaterial({shading: THREE.SmoothShading, side: THREE.DoubleSide, transparent: true, opacity: 0.34, wireframe:true,wireframeLinewidth: 10});
 				mesh = new THREE.Mesh(geometry, material);
 				mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.79;
 				scene.add(mesh);
 				
-				wgeometry = new THREE.PlaneGeometry( 1000, 1000, 500, 200 );
-				wmaterial = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true,wireframeLinewidth: 1 } );
-				wireplane = new THREE.Mesh( wgeometry, wmaterial );
-				wireplane.scale.set( 7, 1, 1 );
-				wireplane.rotation.x = - Math.PI / 60;
-				scene.add( wireplane );
-
-				bg = document.body.style;
-				bg.background = '#000000';
-				
 				scene.fog = new THREE.Fog( 0xffffff, 1, 1 );ambientLight = new THREE.AmbientLight( 0x000000 );
 				scene.add( ambientLight );
-				
-				// geometry = new THREE.Geometry();
-				// for ( i = 0; i < 150000; i ++ ) {
-				// 	var vertex = new THREE.Vector3();
-				// 	vertex.x = 1000 * Math.random() - 0;
-				// 	vertex.y = 1000 * Math.random() - 250;
-				// 	vertex.z = 1000 * Math.random() - 500;
-				// 	geometry.vertices.push( vertex );
-				// }
-				// material = new THREE.ParticleBasicMaterial( { size: 5, sizeAttenuation: false, transparent: true } );
-				// material.color.setHex( 0x00ffff );
-				// particles = new THREE.ParticleSystem( geometry, material );
-				// particles.sortParticles = true;
-				// scene.add( particles );
-
-
+			
 
 			}
 
@@ -81,9 +56,9 @@
 				camera.lookAt(mesh.position);
 				mesh.position.y = Math.sin( Date.now() * 0.001 ) * 5;
 				
-				mesh.rotation.x = Date.now() * 0.00001;	
-				mesh.rotation.y = Date.now() * 0.00001;	
-				mesh.rotation.z = Date.now() * 0.00005;
+				mesh.rotation.x = Date.now() * 0.00005;	
+				mesh.rotation.y = Date.now() * 0.00005;	
+				mesh.rotation.z = Date.now() * 0.0001;
 				
 				// particles.rotation.y = Date.now() * 0.0001;
 

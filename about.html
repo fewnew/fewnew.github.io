@@ -4,19 +4,75 @@
 	<title>Softwar(e) | About</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	<link rel="icon" href="  " type="image/png" sizes="32x32">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+  	<!-- <link rel="icon" href="  " type="image/png" sizes="32x32"> -->
+
+  	<script type="text/javascript">
+  		function OpenMenu () {
+		document.getElementById("menu").style.visibility = "visible";}
+
+		function CloseMenu () {
+		document.getElementById("menu").style.visibility = "hidden";}
+  	</script>
 </head>
-<body style="background-color: #ccc;">
+<body style="background-color:#ccc;">
+
+	<iframe src="mesh.html" id="sketch"></iframe>
+
 	<div class="row">
-		<img src="images/cover-image.png" alt="Softwar(e) Cover Image" class="one column" id="cover-image">
+		<div class="one column menu-icon">
+			<i class="fas fa-bars" onclick="OpenMenu()"></i>
+		</div>
+	</div>
+
+	<div class="row">
+	<nav class="one column" id="menu">
+		<div class="one column menu-icon" id="close">
+			<i class="fas fa-times" onclick="CloseMenu()"></i>
+		</div>
+		<ul>
+			<li><span class="home"><a href="index.html"><i class="home fas fa-home"></i></a></span></li>
+			<li><span><a href="about.html">About</a></span></li>
+			<li><span><a href="manifesto.html">Manifesto</a></span></li>
+			<li><span><a href="video.html">Video</a></span></li>
+			<li><span><a href="webvr.html">WebVR</a></span></li>
+		</ul>
+	</nav>	
+
+	<div class="container">	
 
 		<div class="row">
-	    	<div class="one column">
-	        	<p class="text">Softwar(e) looks poetically at the authoritarian control of information for people enduring geographical predetermination or exploitation by the opaque, algorithm-driven society. Built as a device of ubiquity, restricted access to information of the internet perpetuates inequality; an institutional perpetuation of hegemonic cultural misunderstanding. Through processes of purification and filtering, systems of control are imposed on the information that is made accessible. These interventions into the natural and localized organic growth of networks facilitating communication, define the confrontational edge between imperialization and dictatorship. Softwar(e) addresses the ways we engage and access information. It is a call to action for the development of alternative methods to circumvent the immense global influence and power.
-				</p>
-			</div>	
-	     </div>
-
-	</div>
+	    	<div class="half column" style="margin-top: 15vh;">
+	        	<p class="text">
+	        		<span class="box-title">Details</span><br><br>
+	        		Softwar(e) looks poetically at the authoritarian control of information for people enduring geographical predetermination or exploitation by the opaque, algorithm-driven society. Built as a device of ubiquity, restricted access to information of the internet perpetuates inequality; an institutional perpetuation of hegemonic cultural misunderstanding. Through processes of purification and filtering, systems of control are imposed on the information that is made accessible. These interventions into the natural and localized organic growth of networks facilitating communication, define the confrontational edge between imperialization and dictatorship. Softwar(e) addresses the ways we engage and access information. It is a call to action for the development of alternative methods to circumvent the immense global influence and power.
+				</p>	
+		     </div>
+		     <div class="half column artists">
+	        	<p class="text">
+	        		<span class="box-title">Artists</span><br><br>
+	        		<b>Leily Khatibi</b> is an ambitious designer/artist, originally from Tehran, Iran. She is adept at creating exciting products and developing content using cutting-edge technology and primarily blending art, design, architecture and technology in her work to create unique interactive experiences. She is interested in moving past the mono-sensory world of the internet and adding a tactile layer by creating physical objects with an influence from the screen.
+				<br><a href="http://leilykhatibi.com/" class="websites">leilykhatibi.com</a>
+				<br><br>
+				<b>Roya Ebtehaj</b> is an Iranian artist/educator. She received her BA degree in Photography in her hometown of Tehran, Iran, and is currently pursuing her MFA degree in Digital Media Art at SJSU. Roya’s work shows the complicated network of relationships between politics and art. She incorporates a wide range of cutting-edge technologies to create art about the struggles she has endured by growing up in a post-war era under an authoritarian regime. The raw materials of her artwork include personal narratives, and the contextualization of sociopolitical and cultural issues.
+				<br><a href="https://www.royaebtehaj.com/" class="websites">royaebtehaj.com</a>
+				<br><br>
+				<b>Yi Liu</b> is a versatile artist working on various areas and has multiple skills that she has already applied on practical experiences. She is especially interested in developing motions of characters and building environments. She can represent fantasy worlds via her skills and has passion to learn more ways to represent her colorful imaginations, especially in a digital way. She is currently in the Digital Media Art program at SJSU. Obviously she is not satisfied in just being an illustrator, a graphic Designer, a game Artist, a 2D animator, 3D model builder, a Picture Editor or a landscape architecture designer. She will never stop her pace.
+				<br><a href="http://cargocollective.com/o0ez0o" class="websites">cargocollective.com/o0ez0o</a>
+				<br><br>
+				<b>Cleia Dantas</b> is a San Francisco Digital Media artist. By exploring the infinite possibilities of New Media, Cleia was able to combine her graphic design skills with technology to create innovative art pieces. Her practice is evolving as she navigates in the art world, each color, line and shape combine to harmoniously build structures that celebrates the wonders she feels. Her influences come from a variety of subjects from art history to politics and culture. She is currently pursuing her Master’s in Fine Arts with a focus in Digital Media Arts at San Jose State University.
+				<br><br>
+				<b>Fan Feng</b> is a digital media artist in the Bay Area. He studied in Visual Art in Ontario Canada, and is working on an MFA digital media art at San Jose State University. As a digital media artist, Fan mostly works on projection mapping to make his work extend from beyond the flat screen. Projection mapping thus gives him the ability to transfer the properties of digital contents into the physical world and thus allow him to present this content to his audiences. Fan’s works are influenced by the political environment when he was growing up, he is interested in use technology to around audiences’ discussion of social issues.
+				<br><a href="http://fanfengstudio.com/" class="websites">fanfengstudio.com</a>
+				<br><br>
+				<b>Andrew Blanton</b> is Assistant Professor and and Area Coordinator of the CADRE Media Labs at San Jose State University. His work has been performed and presented around the world in venues such as Google Cultural Lab in Paris, The University of Brasilia, The City University of Hong Kong, STEIM Amsterdam, and the Dallas Museum of Contemporary Art among many others. His current work focuses on the emergent potential between cross-disciplinary arts and technology in the context of New Media Art, building sound and visual environments through software development. Andrew has advanced expertise in percussion, creative software development, and developing projects in the confluence of art and science.
+				<br><a href="http://andrewblanton.com/" class="websites">andrewblanton.com</a>
+				<br><br>
+				With guidance from <b>Rhonda Holberton</b> as Faculty Advisor.
+				<br><a href="http://www.rhondaholberton.com/wp/" class="websites">rhondaholberton.com</a>
+				</p>	
+		     </div>
+		</div>
+	</div>	
 </body>
 </html>
