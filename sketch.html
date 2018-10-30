@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script src="js/three.min.js"></script>
+		<script src="js/Detector.js"></script>
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage()
+
+			var camera, scene, renderer;
+			var geometry, material, mesh;
+
+			function setup() {
+
+				var W = window.innerWidth, H = window.innerHeight;
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( W, H );
+				document.body.appendChild( renderer.domElement );
+
+				camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+				camera.position.z = 500;
+
+				scene = new THREE.Scene();
+
+
+				// paste your code from the geometryGUI here
+				geometry = new THREE.TorusGeometry(113.15, 22.57, 14, 13, 25.13);
+				material = new THREE.MeshNormalMaterial({shading: THREE.SmoothShading, side: THREE.BackSide, transparent: true, opacity: 0.49});
+				mesh = new THREE.Mesh(geometry, material);
+				mesh.scale.x = mesh.scale.y = mesh.scale.z = 1.5;
+				mesh.position.y = 68.38;
+				mesh.rotation.x = 2.47;
+				mesh.castShadow = true;
+				scene.add(mesh);
+
+				wgeometry = new THREE.PlaneGeometry( 1000, 1000, 100, 100 );
+				wmaterial = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, wireframeLinewidth: 1 } );
+				wireplane = new THREE.Mesh( wgeometry, wmaterial );
+				wireplane.scale.set( 4.52, 4.52, 4.52 );
+				wireplane.rotation.x = - Math.PI / 2.5;
+				scene.add( wireplane );
+
+bg = document.body.style;
+bg.background = '#ffffff';
+
+renderer.shadowMapEnabled = true;
+
+scene.fog = new THREE.Fog( 0x000000, 1, 9000 );ambientLight = new THREE.AmbientLight( 0xffffff );
+scene.add( ambientLight );
+
+hemisphereLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.66);
+scene.add( hemisphereLight );
+
+
+
+			}
+
+			function draw() {
+
+				requestAnimationFrame( draw );
+
+				// experiment with code from the snippets menu here
+				camera.lookAt(mesh.position);
+				mesh.position.y = Math.sin( Date.now() * 0.0005 ) * 450;
+				mesh.rotation.x = Date.now() * 0.001;
+				mesh.rotation.y = Date.now() * 0.001;
+				mesh.rotation.z = Date.now() * 0.001;
+
+
+
+				renderer.render( scene, camera );
+
+			}
+
+			setup();
+			draw();
+
+		</script>
+
+	</body>
+</html>
