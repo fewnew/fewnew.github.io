@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Azote-bold';
+  src:  url('fonts/Azote/AzoteBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Azote-light';
+  src:        url('fonts/Azote/AzoteLight.ttf') format('ttf');
+}
+
+
+* {
+  margin:0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Azote-light';
+  overflow-x: hidden;
+  /* background: linear-gradient(to right bottom, #87cfe0, #7ebdfb, #c399f3, #ff69ad, #ff5c40);
+  background-repeat: no-repeat; */
+  background-color: rgb(255, 92, 64);
+  width: 100vw;
+  height:100%;
+  padding-top:3vh;
+}
+
+p {
+font-size:1.5em;}
+
+#wave {
+  position: fixed;
+  border:none;
+  width: 100vw;
+  height: 100vh;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index: -999;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#logo {
+  font-family: 'Azote-bold';
+  text-align: center;
+  font-size: 4em;
+  margin-top:15vh;
+  color: #fff;
+}
+
+.description {
+  text-align: justify;
+  margin: 5vh auto;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.description span {
+  background: #fff;
+}
+
+.video {
+  width: 50%;
+}
+
+footer {
+  width:100vw;
+  padding: 20px;
+  border-top: 2px #fff solid;
+  text-align: center;
+  color:#fff;
+  font-weight: bold;
+  font-size:1.5em;
+  margin:0 auto;
+}
+
+footer a {
+  color: #fff;
+}
+
+/* How it works page */
+.gray {
+  background-color:#f2f2f2;
+  text-align: center;
+  padding:5vh;
+}
+
+.gray i {
+  font-size: 4em;
+  margin-bottom: 2vh;
+  opacity: 0.2;
+}
+
+.gray p {
+  line-height: 1.5;
+}
+
+.white {
+  background-color:#fff;
+  text-align: center;
+  padding:5vh;
+}
+
+.white i {
+  font-size: 4em;
+  margin-bottom: 2vh;
+  opacity: 0.2;
+}
+
+.white p {
+  line-height: 1.5;
+}
+
+.hiwfooter, .hiwfooter a {
+  color:rgb(255, 92, 64);
+}
+
+.hiwfooter {
+  border-top: 2px rgb(255, 92, 64) solid;
+}
+
+.gray b, .white b {
+  color: #B07AD5;
+}
