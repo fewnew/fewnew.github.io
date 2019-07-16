@@ -69,9 +69,21 @@ font-size:1.2em;
   color: #fff;
 }
 
-.video {
-  width: 50%;
-  height:50vh;
+.description i a {
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+#video {
+  width: 460px;
+  height:320px;
+  margin-top:6vh;
+}
+
+#hdfvr-content {
+  float: right;
   margin-top:6vh;
 }
 
