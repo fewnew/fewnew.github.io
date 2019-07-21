@@ -68,6 +68,10 @@ body {
   justify-content: center;
 }
 
+.iframe {
+  height: 270px;
+}
+
 
 /* my styles */
 .social {
