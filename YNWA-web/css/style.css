@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 
 @font-face {
@@ -67,32 +67,32 @@ body {
 .left-column {
   display: flex;
   flex: 1;
-  justify-content: right;
+  justify-content: center;
 }
 
 .right-column {
-  justify-content: left;
+  justify-content: center;
 }
 
 
 /* my styles */
 .social {
-  position: fixed;
-  right:5vw;
-  top:40vh;
-  background-color: #fff;
   justify-content: center;
   text-align: center;
+  margin: 0 auto;
 }
 
 .social a i{
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
-  padding:10px;
-  color: rgb(255, 92, 64);
+  padding:15px;
+  padding-right:20px;
+  color: #fff;
   text-decoration: none;
-  z-index: 999;
   justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: normal;
 }
 
 p {
@@ -127,17 +127,10 @@ font-size:1.2em;
 }
 
 #video {
-  width:100%;
-  height:288px;
-  margin-top:6vh;
-  margin-right:10px;
+  margin-top: 5vh;
 }
 
-#custom-id {
-  margin-top:6vh;
-}
-
-#instructions {
+.instructions {
   background-color: transparent;
   border: 2px #fff solid;
   border-radius: 8px;
@@ -147,10 +140,11 @@ font-size:1.2em;
   font-family: Montserrat;
   text-decoration: none;
   padding: 15px;
+  font-weight: 600;
 }
 
-#instructions:hover,
-  #instructions:active {
+.instructions:hover,
+  .instructions:active {
     background-color: #fff;
     transition: all .20s ease-in-out;
     outline: none;
@@ -158,14 +152,13 @@ font-size:1.2em;
     color: rgb(255, 92, 64);
   }
 
-#instructions:focus {
+.instructions:focus {
     outline:0;
     transition: all .20s ease-in-out;
 }
 
 footer {
   width:100vw;
-  padding: 20px;
   border-top: 2px #fff solid;
   text-align: center;
   color:#fff;
@@ -175,7 +168,13 @@ footer {
   margin-top: 10vh;
 }
 
-footer a {
+.ending {
+  padding: 10px;
+  vertical-align: middle;
+  line-height: 2em;
+}
+
+.ending a {
   color: #fff;
 }
 
@@ -250,6 +249,7 @@ footer a {
   font-family: Montserrat;
   text-decoration: none;
   padding: 15px;
+  font-weight: 600;
 }
 
 #start:hover,
@@ -320,6 +320,17 @@ footer a {
 .row {
      flex-direction: row;
     }
+
+#custom-id {
+  margin-top:6vh;
+}
+
+#video {
+  width:640px;
+  height:360px;
+  margin-top:6vh;
+  margin-right:10px;
+}
 
 #watch span {
   font-family: 'Prisma Pro';
