@@ -127,7 +127,18 @@ font-size:1.2em;
 }
 
 #video {
-  margin-top: 5vh;
+  margin-top: 3vh;
+  width: 430px;
+  height:330px;
+}
+
+#custom-id1{
+
+}
+
+#custom-id2 {
+  display: none;
+  visibility: hidden;
 }
 
 .instructions {
@@ -269,14 +280,12 @@ footer {
 #watch span {
   background-color:#333;
   color: #fff;
-  font-family: 'Monoton', cursive;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
 }
 
 .subscribe input {
-  width: 30vw;
+  width: 80%;
   font-size: 1em;
   padding:7px;
 }
@@ -321,10 +330,6 @@ footer {
      flex-direction: row;
     }
 
-#custom-id {
-  margin-top:6vh;
-}
-
 #video {
   width:640px;
   height:360px;
@@ -332,8 +337,26 @@ footer {
   margin-right:10px;
 }
 
+#custom-id1 {
+  display: none;
+  visibility: hidden;
+}
+
+#custom-id2 {
+  width:640px;
+  height:430px;
+  display: block;
+  visibility: visible;
+  margin-top:6vh;
+}
+
 #watch span {
-  font-family: 'Prisma Pro';
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Montserrat', sans-serif;\
+  font-size: 2em;
+}
+
+.subscribe input {
+  width: 40%;
+  font-size: 1em;
+  padding:7px;
 }

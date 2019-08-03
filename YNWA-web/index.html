@@ -29,8 +29,6 @@
 
 <span id="menu" onclick="openNav()">&#9776; MENU</span>
 
-
-
 <center>
   <div class="container">
 
@@ -51,7 +49,8 @@
 
 <div class="right-column">
   <!-- begin video recorder code -->
-  <piperecorder id="custom-id" pipe-width="640" pipe-height="360" pipe-qualityurl="avq/240p.xml" pipe-accountHash="22864bed1e4827f6798d501706aeb89f" pipe-eid="1" pipe-mrt="120" pipe-asv="0" ></piperecorder>
+  <div id="custom-id1" ></div>
+  <div id="custom-id2" ></div>
   <!-- end video recorder code -->
 </div>
 </div>
@@ -61,7 +60,7 @@
   </div>
 <br><br><br><br>
 <footer class="row">
-  <p class="half column ending">Project organized by <a href="https://www.mmd.ca/">Mel Day</a></p>
+  <p class="half column ending" style="font-weight: normal;">Project organized by <a href="https://www.mmd.ca/">Mel Day</a></p>
   <div class="half column social">
     <a href="mailto:writemelday@gmail.com?Subject=Hello%20YNWA" target="_top"><i class="far fa-envelope"></i></a>
     <a><i class="fab fa-instagram"></i></a>
@@ -70,6 +69,18 @@
     <a><i class="fab fa-linkedin-in"></i></a>
   </div>
 </footer></center>
+
+<script type="text/javascript">
+// MOBILE ADDPIPE
+  var pipeParams2 = {size: {width:430,height:330}, qualityurl: "avq/480p.xml",accountHash:"ACCOUNT_HASH", eid:1, showMenu:"true", mrt:120,sis:0,asv:1,mv:0, dpv:0, ao:0, dup:0};
+  PipeSDK.insert('custom-id1', pipeParams2, function(myRecorderObject){ });
+
+  // DESKTOP ADDPIPE
+  var pipeParams2 = {size: {width:640,height:360}, qualityurl: "avq/480p.xml",accountHash:"ACCOUNT_HASH", eid:1, showMenu:"true", mrt:120,sis:0,asv:1,mv:0, dpv:0, ao:0, dup:0};
+  PipeSDK.insert('custom-id2', pipeParams2, function(myRecorderObject){ });
+
+</script>
+
 
 <script>
 function openNav() {
