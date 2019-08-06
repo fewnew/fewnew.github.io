@@ -72,12 +72,13 @@
 
 <script type="text/javascript">
 // MOBILE ADDPIPE
-  var pipeParams2 = {size: {width:360,height:270}, qualityurl: "avq/480p.xml",accountHash:"ACCOUNT_HASH", eid:1, showMenu:"true", mrt:120,sis:0,asv:1,mv:0, dpv:0, ao:0, dup:0};
-  PipeSDK.insert('custom-id1', pipeParams2, function(myRecorderObject){ });
+
+  var pipeParams = {size: {width:360,height:270}, qualityurl: "avq/360p.xml",accountHash:"22864bed1e4827f6798d501706aeb89f", eid:1, mrt:120};
+  PipeSDK.insert("custom-id1", pipeParams,function(recorderObject){});
 
   // DESKTOP ADDPIPE
-  var pipeParams2 = {size: {width:640,height:360}, qualityurl: "avq/480p.xml",accountHash:"ACCOUNT_HASH", eid:1, showMenu:"true", mrt:120,sis:0,asv:1,mv:0, dpv:0, ao:0, dup:0};
-  PipeSDK.insert('custom-id2', pipeParams2, function(myRecorderObject){ });
+  var pipeParams = {size: {width:640,height:360}, qualityurl: "avq/360p.xml",accountHash:"22864bed1e4827f6798d501706aeb89f", eid:1, mrt:120};
+  PipeSDK.insert("custom-id2", pipeParams,function(recorderObject){});
 
 </script>
 
