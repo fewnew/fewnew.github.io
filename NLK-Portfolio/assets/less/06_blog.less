@@ -1,0 +1,149 @@
+
+// BLOG
+// --------------------
+
+
+	.posts__list {
+		.post {
+			text-align: center;
+
+			&:not(:last-child) { margin-bottom: 100px; }
+
+			.date {
+				text-transform: uppercase;
+				font-size: 10px;
+				letter-spacing: 1px;
+				margin-bottom: 10px;
+			}
+
+			.post__title { font-weight: 700; }
+
+			// responsive
+			.responsive(600px, {
+				&:not(:last-child) { margin-bottom: 50px; }
+			});
+		}
+
+		.posts__list__nav {
+			text-align: center;
+			margin-top: 100px;
+
+			a {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				font-size: 22px;
+				line-height: 40px;
+
+				.transition(all 0.2s ease);
+
+				&:hover { color: lighten(@dark_color, 50%); }
+			}
+		}
+
+		.posts__thumbs {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			opacity: 0;
+			visibility: hidden;
+			background: darken(@white_color, 30%);
+
+			.transition(opacity 0.2s ease, visibility 0.2s ease;);
+
+			&.visible {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			// responsive
+			.responsive(600px, {
+				display: none;
+			});
+		}
+	}
+
+	.single__post {
+		.single__post__image { margin-bottom: 100px; }
+
+		.single__post__left-column {
+			float: left;
+			width: 300px;
+		}
+
+		.post__content { padding-left: 300px; }
+
+		// responsive
+		.responsive(800px, {
+			.single__post__image { margin-bottom: 50px; }
+
+			.single__post__left-column {
+				width: 100%;
+				text-align: center;
+				float: none;
+				margin-bottom: 50px;
+			}
+
+			.post__content { padding-left: 0; }
+		});
+	}
+
+
+	// comments
+	// --------------------
+
+	.comments-list {
+		list-style: none;
+
+		.comment {
+			padding: 25px;
+			background: @white_color;
+
+			&:not(:last-child) { margin-bottom: 25px; }
+
+			.children {
+				list-style: none;
+				margin: 25px 0 0 50px;
+
+				.comment:last-child { padding-bottom: 0; }
+			}
+
+			.comment-user {
+				float: left;
+				width: 100px;
+				position: relative;
+
+				img { border-radius: 50%; }
+			}
+
+			.comment-content {
+				margin-left: 120px;
+
+				.date {
+					font-size: 14px;
+					color: darken(@white_color, 30%);
+				}
+
+				.comment-text { margin-top: 15px; }
+
+				.reply { font-size: 14px; }
+			}
+		}
+
+		// responsive
+		.responsive(600px, {
+			.comment {
+				&:not(:last-child) { margin-bottom: 10px; }
+
+				.comment-user { width: 40px; }
+				.comment-content { margin-left: 60px; }
+
+				.children {
+					margin: 25px 0 0 0;
+
+					.comment { padding: 0; }
+				}
+			}
+		});
+	}

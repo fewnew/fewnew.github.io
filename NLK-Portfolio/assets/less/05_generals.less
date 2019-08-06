@@ -1,0 +1,119 @@
+
+/** 05. GENERALS
+================================================== **/
+
+
+// heros
+
+	.hero {
+		position: relative;
+
+		.hero__content {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+
+
+// headings
+
+	.heading {
+		padding: 100px 0 0;
+		position: relative;
+
+		&:after {
+			display: block;
+			content: '';
+			width: 2px;
+			height: 50px;
+			background: @dark_color;
+			margin: 50px auto 100px;
+		}
+
+		// responsive
+		.responsive(600px, {
+			padding: 25px 0 0;
+
+			&:after { margin-bottom: 50px; }
+		});
+	}
+
+
+// imageblocks
+
+	.imageblock {
+		position: relative;
+
+		.imageblock__content {
+			width: 50%;
+			padding: 100px;
+			position: relative;
+		}
+
+		.imageblock__holder {
+			width: 50%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+		}
+
+		&.left .imageblock__content { left: 50%; }
+		&.left .imageblock__holder { left: 0; }
+		&.right .imageblock__holder { right: 0; }
+
+		// responsive
+		.responsive(800px, {
+			.imageblock__content {
+				width: 100%;
+				left: 0 !important;
+				padding: 100px 50px;
+			}
+
+			.imageblock__holder {
+				width: 100%;
+				height: 50vh;
+				position: relative;
+			}
+		});
+	}
+
+
+// skills
+
+	.skills {
+		position: relative;
+
+		.skill {
+			position: relative;
+
+			&:not(:last-child) { margin-bottom: 25px; }
+
+			.skill__title {
+				font-size: 14px;
+				font-weight: 700;
+				margin-bottom: 10px;
+			}
+
+			.skill__bar {
+				width: 100%;
+				height: 6px;
+				background: darken(@white_color, 10%);
+				position: relative;
+
+				.skill__bar__percent {
+					width: 10px;
+					height: 100%;
+					background: @dark_color;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					.transition(all 0.3s ease);
+				}
+			}
+		}
+	}

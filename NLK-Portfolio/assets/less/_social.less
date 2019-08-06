@@ -1,0 +1,26 @@
+
+// SOCIAL
+// --------------------
+
+
+	.social {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			position: relative;
+
+			a {
+				font-size: 16px;
+				color: @dark_color;
+				padding: 0 15px;
+
+				.transition(all 0.2s ease);
+
+				&:hover { color: @primary_color; }
+			}
+
+			&:first-child a { padding-left: 0; }
+			&:last-child a { padding-right: 0; }
+		}
+	}

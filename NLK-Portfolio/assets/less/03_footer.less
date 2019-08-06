@@ -1,0 +1,66 @@
+
+/** 03. FOOTER
+================================================== **/
+
+
+	.footer {
+		text-align: center;
+		padding: 100px 0;
+
+		.copy {
+			margin-bottom: 50px;
+
+			&:before {
+				display: block;
+				content: '';
+				width: 2px;
+				height: 30px;
+				margin: 0 auto 50px;
+				background: @dark_color;
+			}
+		}
+
+		.social { margin-bottom: 0; }
+
+		.back2top {
+			min-width: 100px;
+			position: fixed;
+			bottom: 40px;
+			right: 0;
+			z-index: 10;
+			font-family: @font2;
+			font-size: 14px;
+			font-style: italic;
+			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
+			line-height: 100px;
+
+			.transition(all 0.3s ease);
+			.transform(rotate(-90deg));
+
+			&.visible {
+				bottom: 50px;
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&:hover { color: @dark_color; }
+		}
+
+		// responsive
+		.responsive(800px, {
+			text-align: center;
+
+			.social { margin: 50px 0; }
+
+			.back2top {
+				position: relative;
+				line-height: 1;
+
+				.transform(rotate(0deg));
+
+				&.visible { bottom: 0; }
+			}
+		});
+	}
