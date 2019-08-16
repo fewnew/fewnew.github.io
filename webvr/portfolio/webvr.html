@@ -1,0 +1,178 @@
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WebVR</title>
+
+    <meta name="description" content="WebVR" />
+    <link rel="icon" href="../images/NLK-Logo.png" type="image/png" sizes="32x32">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.0/dist/aframe-extras.js"></script>
+    <script src="https://ideaspacevr.github.io/aframe-particle-system-component/dist/aframe-particle-system-component.min.js"></script>
+  </head>
+
+  <body class="a-body">
+    <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+
+      <a-sky src="../images/sky.jpg"></a-sky>
+
+      <a-ocean width="50" depth="30" density="40" speed="5"></a-ocean>
+
+      <a-assets>
+        <a-asset-item id="azadi" src="azadi.obj"></a-asset-item>
+        <a-asset-item id="milad" src="milad.obj"></a-asset-item>
+        <a-asset-item id="boat" src="boat.obj"></a-asset-item>
+        <a-asset-item id="girl" src="girl.obj"></a-asset-item>
+        <a-asset-item id="crane" src="crane.obj"></a-asset-item>
+        <a-asset-item id="cloud" src="cloud.obj"></a-asset-item>
+        <a-asset-item id="unicorn-obj" src="../assets/unicorn/Unicorn_01.obj"></a-asset-item>
+        <a-asset-item id="unicorn-mtl" src="../assets/unicorn/Unicorn_01.mtl"></a-asset-item>
+        </a-assets>
+        <a-asset-item id="volcano-obj" src="../assets/volcano/PUSHILIN_volcano.obj"></a-asset-item>
+        <a-asset-item id="volcano-mtl" src="../assets/volcano/PUSHILIN_volcano.mtl"></a-asset-item>
+        </a-assets>
+        <a-asset-item id="lightningbolt-obj" src="../assets/lightning_bolt/PUSHILIN_lightning_bolt.obj"></a-asset-item>
+        <a-asset-item id="lightningbolt-mtl" src="../assets/lightning_bolt/PUSHILIN_lightning_bolt.mtl"></a-asset-item>
+        <a-asset-item id="anartree-obj" src="../assets/anar_tree/anartree.obj"></a-asset-item>
+        <a-asset-item id="anartree-mtl" src="../assets/anar_tree/anartree.mtl"></a-asset-item>
+        </a-assets>
+        <a-asset-item id="model-obj" src="../assets/islands/model.obj"></a-asset-item>
+        <a-asset-item id="materials-mtl" src="../assets/islands/materials.mtl"></a-asset-item>
+      </a-assets>
+
+      <!-- Scene Light-->
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-1 1 1"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.4" position="1 1 -1"></a-entity>
+
+      <!-- Dust Particles -->
+      <a-entity position="0 2.25 -15" particle-system="preset: dust; particleCount: 1000"></a-entity>
+
+      <!-- Volcano -->
+      <a-entity obj-model="obj: #volcano-obj; mtl: #volcano-mtl" position="1 1 -12" scale="6 6 6" shadow=""></a-entity>
+
+      <!-- Volcano Particles -->
+      <a-entity position="1 2.25 -12" particle-system="color: #FF0000,#44CC00"></a-entity>
+
+      <!-- Cloud -->
+      <a-entity obj-model="obj:cloud.obj" scale="1.5 1.5 1.5" position="7 3.6 -3" material="color:#CAE1F1" rotation="0 45 0" shadow=";">
+        <a-animation attribute="position"
+                       dur="2000"
+                       from="7 3.6 -3"
+                       to="7 2.9 -3"
+                       easing="ease-out"
+                       repeat="indefinite"
+                       direction="alternate">
+          </a-animation>
+      </a-entity>
+
+      <!-- Unicorn -->
+      <a-entity obj-model="obj: #unicorn-obj; mtl: #unicorn-mtl;" position="7 4.2 -3.2" scale="1.2 1.2 1.2" shadow="">
+        <a-animation attribute="rotation"
+                       dur="3000"
+                       from="0 240 0"
+                       to="-30 240 0"
+                       easing="ease-out"
+                       repeat="indefinite"
+                       direction="alternate">
+          </a-animation>
+          <a-animation attribute="position"
+                       dur="2000"
+                       from="7 4.2 -3.2"
+                       to="7 3.5 -3.2"
+                       easing="ease-out"
+                       repeat="indefinite"
+                       direction="alternate">
+          </a-animation>
+      </a-entity>
+
+      <!-- Anar Tree -->
+      <a-entity obj-model="obj: #anartree-obj; mtl: #anartree-mtl" position="-14 3.5 -5" scale="4 4 4" shadow=""></a-entity>
+
+      <!-- Azadi -->
+      <a-entity obj-model="obj:azadi.obj" scale="0.75 0.75 0.75" position="11 -0.25 7" rotation="0 -8 0" material="color:#bbb" shadow=""></a-entity>
+
+      <!-- Milad -->
+      <a-entity obj-model="obj:milad.obj" scale="0.1 0.1 0.1" position="-3.5 5 2.5"  material="color:#eee; metalness:0.3;" shadow="" side="double"></a-entity>
+
+      <!-- Boat -->
+      <a-entity obj-model="obj:boat.obj" scale="1 1 1" position="-2 1 0" shadow="" material="color:#fff; metalness:0.2;" side="double">
+          <a-animation attribute="rotation"
+               repeat="indefinite"
+               to="0 360 0"
+               dur="30000"
+               easing="linear"
+         ></a-animation>     
+      </a-entity>
+
+      <!-- Girl -->
+      <a-entity obj-model="obj:girl.obj" scale="1 1 1" position="-1.7 1.5 0" shadow="" material="color:#DBB4FA">
+        <a-animation attribute="rotation"
+               repeat="indefinite"
+               to="0 360 0"
+               dur="30000"
+               easing="linear"
+         ></a-animation>
+      </a-entity>
+
+      <!-- Lightning Bolt -->
+      <a-entity obj-model="obj: #lightningbolt-obj; mtl: #lightningbolt-mtl" position="3 5 -3" scale="0.5 0.5 0.5" shadow=""></a-entity>
+
+      <!-- Islands -->
+      <a-entity obj-model="obj: #model-obj; mtl: #materials-mtl" position="-4 4 3" scale="2 2 2" shadow=""></a-entity>
+
+      <!-- Crane -->
+      <a-entity obj-model="obj:crane.obj" shadow="" material="color:#D0DFF5; metalness:0.2;" side="double" rotation="0 240 0">
+          <a-animation attribute="scale"
+                       repeat="indefinite"
+                       from="0.5 0.5 0.5"
+                       to="0.6 0.6 0.6"
+                       dur="1500"
+                       easing="linear"
+                       direction="alternate">
+          </a-animation>
+          <a-animation attribute="position"
+                       dur="15000"
+                       from="10 7 10"
+                       to="0 7 10"
+                       easing="linear">
+          </a-animation>
+          <a-animation attribute="position"
+                       delay="15000"
+                       dur="15000"
+                       from="0 7 10"
+                       to="0 7 0"
+                       easing="linear">
+          </a-animation>
+          <a-animation attribute="position"
+                       delay="30000"
+                       dur="15000"
+                       from="0 7 0"
+                       to="0 7 -10"
+                       easing="linear">
+          </a-animation>
+          <a-animation attribute="material.opacity" from="1" to="0" begin="45000" dur="1000"></a-animation>
+          <a-animation attribute="rotation"
+                       dur="15000"
+                       from="0 270 0"
+                       to="0 180 0"
+                       easing="linear">
+          </a-animation>
+          <a-animation attribute="rotation"
+                       delay="15000"
+                       dur="15000"
+                       from="0 180 0"
+                       to="0 120 0"
+                       easing="linear">
+          </a-animation>
+          <a-animation attribute="rotation"
+                       delay="40000"
+                       dur="15000"
+                       from="0 120 0"
+                       to="0 180 0"
+                       easing="linear">
+          </a-animation></a-entity>
+
+    </a-scene>
+</body>
+</html>
